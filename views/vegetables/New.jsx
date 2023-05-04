@@ -1,13 +1,13 @@
 const React = require("react")
 const Nav = require("../components/Nav")
-const DefaultLayout = require('../layout/Default')
 
 class New extends React.Component {
   render() {
     return(
-      <DefaultLayout title="Fruits New Page" children="Create fruits" link="/fruits" text="Home" >
+      <div>
+        <Nav link="/vegetables" text="Home" />
         <h1>Create a New Fruit!</h1>
-        <form action="/fruits" method="POST">
+        <form action="/vegetables" method="POST">
           Name: <input type="text" name="name" />
           Color: <input type="text" name="color" />
           Is Ready To Eat: 
@@ -15,9 +15,9 @@ class New extends React.Component {
             type="checkbox" 
             name="readyToEat" 
           /> 
-          <input type="submit" value="Create Fruit" />       
+          <input type="submit" value="Create Vegetable" />       
         </form>
-        </DefaultLayout>
+      </div>
     )
   }
 }
